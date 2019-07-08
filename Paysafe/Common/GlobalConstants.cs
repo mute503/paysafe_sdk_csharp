@@ -165,6 +165,8 @@ namespace Paysafe.Common
         public static readonly string shippingDetails = "shippingDetails";
         public static readonly string shoppingCart = "shoppingCart";
         public static readonly string signatureStatus = "signatureStatus";
+        public static readonly string threeDSecureVersion = "threeDSecureVersion";
+        public static readonly string directoryServerTransactionId = "directoryServerTransactionId";
         public static readonly string sku = "sku";
         public static readonly string state = "state";
         public static readonly string status = "status";
@@ -284,6 +286,12 @@ namespace Paysafe.Common
         public static readonly string statusPending = "PENDING";
         public static readonly string statusProcessing = "PROCESSING";
         public static readonly string statusReceived = "RECEIVED";
+        public static readonly string threeDResultY = "Y";
+        public static readonly string threeDResultA = "A";
+        public static readonly string threeDResultN = "N";
+        public static readonly string threeDResultU = "U";
+        public static readonly string threeDResultE = "E";
+        public static readonly string threeDResultR = "R";
         public static readonly string recurringInitial = "INITIAL";
         public static readonly string recurringRecurring = "RECURRING";
         public static readonly string validationHeld = "HELD";

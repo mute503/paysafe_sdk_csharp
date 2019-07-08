@@ -79,6 +79,8 @@ namespace Paysafe.CardPayments
                 CardPaymentsConstants.authentication,
                 CardPaymentsConstants.billingDetails,
                 CardPaymentsConstants.shippingDetails,
+		CardPaymentsConstants.profile,
+		CardPaymentsConstants.storedCredential,
                 CardPaymentsConstants.recurring,
                 CardPaymentsConstants.merchantDescriptor,
                 CardPaymentsConstants.accordD
