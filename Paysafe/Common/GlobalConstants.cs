@@ -185,10 +185,12 @@ namespace Paysafe.Common
         public static readonly string txnDateTime = "txnDateTime";
         public static readonly string txnTime = "txnTime";
         public static readonly string type = "type";
+        public static readonly string occurrence = "occurrence";
         public static readonly string uri = "uri";
         public static readonly string useAsShippingAddress = "useAsShippingAddress";
         public static readonly string value = "value";
         public static readonly string visaAdditionalAuthData = "visaAdditionalAuthData";
+        public static readonly string storedCredential = "storedCredential";
         public static readonly string xid = "xid";
         public static readonly string year = "year";
         public static readonly string zip = "zip";
@@ -332,7 +334,14 @@ namespace Paysafe.Common
         public static readonly string VI = "VI";
         public static readonly string VD = "VD";
         public static readonly string VE = "VE";
-        
+
+        public static readonly string type_adhoc = "ADHOC";
+        public static readonly string type_topup = "TOPUP";
+        public static readonly string type_recurring = "RECURRING";
+
+        public static readonly string initial = "INITIAL";
+        public static readonly string subsequent = "SUBSEQUENT";
+
         public static readonly List<string> enumCarrier = new List<string>{
             carrierAPC,
             carrierAnpost,
@@ -361,6 +370,17 @@ namespace Paysafe.Common
             shipMethodTwoDay,
             shipMethodLowestCost,
             shipMethodOther
+        };
+        public static readonly List<string> enumType = new List<string>()
+        {
+            type_adhoc,
+            type_topup,
+            type_recurring
+        };
+        public static readonly List<string> enumOccurrence = new List<string>()
+        {
+            initial,
+            subsequent
         };
     }
 }
