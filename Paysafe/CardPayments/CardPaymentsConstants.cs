@@ -60,5 +60,13 @@ namespace Paysafe.CardPayments
             statusFailed,
             statusCancelled
         };
+        public static readonly List<string> enumThreeDResult = new List<string>() {
+            threeDResultY,
+            threeDResultA,
+            threeDResultN,
+            threeDResultU,
+            threeDResultE,
+            threeDResultR
+        };
     }
 }

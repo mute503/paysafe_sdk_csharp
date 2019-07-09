@@ -89,6 +89,7 @@ namespace Paysafe.CardPayments
             {CardPaymentsConstants.riskReasonCode, typeof(List<int>)},
             {CardPaymentsConstants.acquirerResponse, typeof(AcquirerResponse)},
             {CardPaymentsConstants.visaAdditionalAuthData, typeof(VisaAdditionalAuthData)},
+            {CardPaymentsConstants.storedCredential, typeof(StoredCredential)},
             {CardPaymentsConstants.settlements, typeof(List<Settlement>)},
             {CardPaymentsConstants.error, typeof(OptError)},
             {CardPaymentsConstants.links, typeof(List<Link>)}
@@ -309,6 +310,25 @@ namespace Paysafe.CardPayments
         public void shippingDetails(ShippingDetails data)
         {
             this.setProperty(CardPaymentsConstants.shippingDetails, data);
+        }
+        
+        /// <summary>
+        /// Get the StoredCredential
+        /// </summary>
+        /// <returns>StoredCredential</returns>
+        public StoredCredential storedCredential()
+        {
+            return this.getProperty(CardPaymentsConstants.storedCredential);
+
+        }
+
+        /// <summary>
+        /// Set the StoredCredential
+        /// </summary>
+        /// <returns>void</returns>
+        public void storedCredential(StoredCredential data)
+        {
+            this.setProperty(CardPaymentsConstants.storedCredential, data);
         }
 
         /// <summary>
@@ -797,6 +817,19 @@ namespace Paysafe.CardPayments
                 }
                 return this.properties[CardPaymentsConstants.shippingDetails] as ShippingDetails.ShippingDetailsBuilder<AuthorizationBuilder>;
             }
+            
+            /// <summary>
+            /// Build a profile object within this authorization.
+            /// </summary>
+            /// <returns>Profile.ProfileBuilder<AuthorizationBuilder></returns>
+            public Profile.ProfileBuilder<AuthorizationBuilder> profile()
+            {
+                if (!this.properties.ContainsKey(CardPaymentsConstants.profile))
+                {
+                    this.properties[CardPaymentsConstants.profile] = new Profile.ProfileBuilder<AuthorizationBuilder>(this);
+                }
+                return this.properties[CardPaymentsConstants.profile] as Profile.ProfileBuilder<AuthorizationBuilder>;
+            }
 
             /// <summary>
             /// Set the recurring parameter
@@ -834,6 +867,19 @@ namespace Paysafe.CardPayments
                     this.properties[CardPaymentsConstants.accordD] = new AccordD.AccordDBuilder<AuthorizationBuilder>(this);
                 }
                 return this.properties[CardPaymentsConstants.accordD] as AccordD.AccordDBuilder<AuthorizationBuilder>;
+            }
+            
+            /// <summary>
+            /// Build an StoredCredential object within this authorization.
+            /// </summary>
+            /// <returns>StoredCredential.StoredCredentialBuilder<AuthorizationBuilder></returns>
+            public StoredCredential.StoredCredentialBuilder<AuthorizationBuilder> storedCredential()
+            {
+                if (!this.properties.ContainsKey(CardPaymentsConstants.storedCredential))
+                {
+                    this.properties[CardPaymentsConstants.storedCredential] = new StoredCredential.StoredCredentialBuilder<AuthorizationBuilder>(this);
+                }
+                return this.properties[CardPaymentsConstants.storedCredential] as StoredCredential.StoredCredentialBuilder<AuthorizationBuilder>;
             }
         }
     }
